@@ -1,0 +1,289 @@
+/* ==================== Medical Page Specific Styles ==================== */
+
+.page-medical {
+  /* Medical page uses same base but with adjusted tone */
+}
+
+/* Hero adjustments */
+.hero-medical {
+  min-height: 80vh;
+}
+
+.hero-medical .container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-3xl);
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .hero-medical .container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.hero-scene-image {
+  width: 100%;
+  max-width: 500px;
+  border-radius: var(--radius-xl);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.hero-label {
+  display: inline-block;
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-primary);
+  margin-bottom: var(--space-md);
+  padding: var(--space-xs) var(--space-md);
+  background: rgba(212, 162, 83, 0.1);
+  border-radius: var(--radius-2xl);
+}
+
+.nav-link-active {
+  color: var(--color-text) !important;
+}
+
+/* ==================== Problem Section ==================== */
+
+.problem {
+  padding: var(--space-4xl) 0;
+  background: var(--color-surface);
+}
+
+.problem-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-3xl);
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .problem-layout {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.problem-title {
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  margin-bottom: var(--space-lg);
+}
+
+.problem-text {
+  color: var(--color-text-muted);
+  font-size: 1.125rem;
+  margin-bottom: var(--space-md);
+}
+
+.problem-text:last-child {
+  margin-bottom: 0;
+  font-style: italic;
+  color: var(--color-text);
+}
+
+.problem-stats {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+.stat {
+  padding: var(--space-xl);
+  background: var(--color-bg);
+  border-radius: var(--radius-xl);
+  border-left: 3px solid var(--color-primary);
+}
+
+.stat-number {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  line-height: 1;
+  margin-bottom: var(--space-sm);
+}
+
+.stat-label {
+  font-family: var(--font-ui);
+  font-size: 0.9375rem;
+  color: var(--color-text-muted);
+}
+
+/* ==================== Solution Section ==================== */
+
+.solution {
+  padding: var(--space-4xl) 0;
+}
+
+.solution-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+}
+
+@media (min-width: 768px) {
+  .solution-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.solution-card {
+  padding: var(--space-xl);
+  background: var(--color-surface);
+  border-radius: var(--radius-xl);
+  transition: transform var(--transition-slow);
+}
+
+.solution-card:hover {
+  transform: translateY(-4px);
+}
+
+.solution-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+  margin-bottom: var(--space-md);
+}
+
+.solution-title {
+  font-family: var(--font-ui);
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: var(--space-sm);
+}
+
+.solution-text {
+  color: var(--color-text-muted);
+  font-size: 0.9375rem;
+}
+
+/* ==================== Scenarios Section ==================== */
+
+.scenarios {
+  padding: var(--space-4xl) 0;
+  background: linear-gradient(to bottom, transparent, var(--color-surface));
+}
+
+.scenarios-list {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.scenario {
+  display: flex;
+  gap: var(--space-lg);
+  padding: var(--space-lg);
+  background: var(--color-bg);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--brown-dark);
+}
+
+.scenario-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.scenario-title {
+  font-family: var(--font-ui);
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: var(--space-xs);
+}
+
+.scenario-text {
+  color: var(--color-text-muted);
+  font-size: 0.9375rem;
+}
+
+/* ==================== Legal Section ==================== */
+
+.legal {
+  padding: var(--space-4xl) 0;
+}
+
+.legal-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.legal-title {
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  text-align: center;
+  margin-bottom: var(--space-md);
+}
+
+.legal-text {
+  font-size: 1.125rem;
+  color: var(--color-text-muted);
+  text-align: center;
+  margin-bottom: var(--space-3xl);
+}
+
+.legal-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+}
+
+@media (min-width: 640px) {
+  .legal-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.legal-item {
+  padding: var(--space-lg);
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+}
+
+.legal-item-title {
+  font-family: var(--font-ui);
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: var(--space-sm);
+  color: var(--color-primary);
+}
+
+.legal-item-text {
+  font-size: 0.9375rem;
+  color: var(--color-text-muted);
+}
+
+/* ==================== Story/Quote Section ==================== */
+
+.story {
+  padding: var(--space-4xl) 0;
+  background: var(--color-surface);
+}
+
+.story-quote {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.story-quote p {
+  font-family: var(--font-display);
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.5;
+  margin-bottom: var(--space-lg);
+}
+
+.story-attribution {
+  font-family: var(--font-ui);
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+}

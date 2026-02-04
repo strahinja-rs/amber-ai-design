@@ -1,0 +1,258 @@
+/* ==================== Pricing Page Specific Styles ==================== */
+
+.page-pricing {
+  /* Pricing page context */
+}
+
+/* ==================== Hero ==================== */
+
+.hero-pricing {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: 100px;
+}
+
+.hero-pricing .container {
+  display: block;
+  text-align: center;
+}
+
+.pricing-hero-content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.pricing-headline {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 600;
+  margin-bottom: var(--space-2xl);
+  letter-spacing: -0.02em;
+}
+
+.price-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-xl);
+}
+
+.price-amount {
+  font-family: var(--font-display);
+  font-size: clamp(4rem, 12vw, 8rem);
+  font-weight: 700;
+  color: var(--color-primary);
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+.price-note {
+  font-family: var(--font-ui);
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.pricing-subline {
+  font-size: 1.25rem;
+  color: var(--color-text-muted);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* ==================== What's Included ==================== */
+
+.included {
+  padding: var(--space-4xl) 0;
+  background: var(--color-surface);
+}
+
+.included-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-lg);
+  margin-top: var(--space-2xl);
+}
+
+@media (min-width: 768px) {
+  .included-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .included-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.included-item {
+  text-align: center;
+  padding: var(--space-lg);
+}
+
+.included-icon {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--space-md);
+  color: var(--color-primary);
+  background: rgba(212, 162, 83, 0.1);
+  border-radius: 50%;
+}
+
+.included-title {
+  font-family: var(--font-ui);
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: var(--space-xs);
+}
+
+.included-text {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+/* ==================== Comparison Table ==================== */
+
+.comparison {
+  padding: var(--space-4xl) 0;
+}
+
+.comparison-table-wrapper {
+  overflow-x: auto;
+  margin-top: var(--space-2xl);
+  border-radius: var(--radius-xl);
+  background: var(--color-surface);
+}
+
+.comparison-table {
+  width: 100%;
+  min-width: 600px;
+  border-collapse: collapse;
+  font-family: var(--font-ui);
+  font-size: 0.9375rem;
+}
+
+.comparison-table th,
+.comparison-table td {
+  padding: var(--space-lg);
+  text-align: left;
+  border-bottom: 1px solid var(--brown-dark);
+}
+
+.comparison-table th {
+  font-weight: 600;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+}
+
+.comparison-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.comparison-table tbody tr:hover {
+  background: rgba(212, 162, 83, 0.05);
+}
+
+/* Highlight Amber column */
+.amber-col {
+  background: rgba(212, 162, 83, 0.1);
+  color: var(--color-text);
+}
+
+.comparison-table th.amber-col {
+  color: var(--color-primary);
+  font-size: 0.875rem;
+}
+
+.feature-col {
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.comparison-note {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  margin-top: var(--space-lg);
+  text-align: center;
+  font-style: italic;
+}
+
+/* ==================== Why No Subscription ==================== */
+
+.why-no-sub {
+  padding: var(--space-4xl) 0;
+  background: linear-gradient(to bottom, transparent, var(--color-surface));
+}
+
+.philosophy-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+  margin-top: var(--space-2xl);
+}
+
+@media (min-width: 640px) {
+  .philosophy-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .philosophy-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.philosophy-card {
+  padding: var(--space-xl);
+  background: var(--color-bg);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--brown-dark);
+  transition: transform var(--transition-slow), border-color var(--transition-slow);
+}
+
+.philosophy-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-primary);
+}
+
+.philosophy-icon {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+  margin-bottom: var(--space-md);
+}
+
+.philosophy-title {
+  font-family: var(--font-ui);
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: var(--space-sm);
+}
+
+.philosophy-text {
+  font-size: 0.9375rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+/* ==================== Nav Active State ==================== */
+
+.nav-link-active {
+  color: var(--color-text) !important;
+}
